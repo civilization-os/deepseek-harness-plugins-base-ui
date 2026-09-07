@@ -1,0 +1,3 @@
+- insert:
+    - id: civilization-base-ui
+      name: "@civilization/deepseek-harness-base-ui"
