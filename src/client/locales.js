@@ -8,6 +8,13 @@ export const zh = {
   issue_failed: '启动失败', 'issue_not-running': '已启用但未运行', issue_stalled: '长时间未完成',
   group_unhealthy: '需要处理', group_active: '正常运行', group_disabled: '已禁用', history: '最近状态变化',
   confirmDisable: '确认禁用这个异常插件？', confirmFixAll: '确认重试当前所有异常插件？', noHistory: '还没有状态变化记录。',
+  runtimeTab: '运行时', dependencyTab: '依赖健康', dependencyIntro: '检查 profile、bundle、peer dependency 和共享运行时实例。',
+  depScanned: '已扫描包', depIssues: '依赖问题', depErrors: '错误', depWarnings: '警告', depHealthy: '当前依赖图没有发现问题。',
+  depSearch: '搜索包、peer 或问题类型', expected: '要求', actual: '当前', autoPeers: '自动安装 peer', autoPeersSafe: '已关闭（安全）', autoPeersUnsafe: '未关闭',
+  fix: '修复', confirmDependencyFix: '确认执行这个依赖修复？修复可能修改 profile package.json、pnpm lockfile 或 workspace 配置。',
+  fix_install_peer: '安装兼容 peer', fix_activate_bundle: '激活 bundle', fix_remove_bundle: '移除失效 bundle', fix_disable_auto_peers: '关闭自动安装', hostPeer: '需要兼容的 DSH 宿主或 module fallback 修复',
+  issue_missing_peer: '缺少 peer', issue_incompatible_peer: 'peer 版本不兼容', issue_duplicate_peer: 'peer 存在多个实例', issue_broken_link: '本地链接失效',
+  issue_package_unresolved: '依赖未安装', issue_bundle_unresolved: 'bundle 无法解析', issue_bundle_inactive: 'bundle 已安装但未激活', issue_auto_peers_unsafe: 'autoInstallPeers 配置不安全', issue_profile_unavailable: 'profile 不可读取',
 }
 export const en = {
   nav: 'Cordis watchdog', title: 'Cordis watchdog', intro: 'Observe the complete Loader plugin tree and recover entries that are not running normally.',
@@ -19,4 +26,11 @@ export const en = {
   issue_failed: 'Failed to start', 'issue_not-running': 'Enabled but not running', issue_stalled: 'Transition is taking too long',
   group_unhealthy: 'Needs attention', group_active: 'Running normally', group_disabled: 'Disabled', history: 'Recent state changes',
   confirmDisable: 'Disable this unhealthy plugin?', confirmFixAll: 'Retry every unhealthy plugin now?', noHistory: 'No state changes recorded yet.',
+  runtimeTab: 'Runtime', dependencyTab: 'Dependency health', dependencyIntro: 'Inspect the profile, bundles, peer dependencies, and shared runtime instances.',
+  depScanned: 'Packages scanned', depIssues: 'Dependency issues', depErrors: 'Errors', depWarnings: 'Warnings', depHealthy: 'No dependency graph issues were found.',
+  depSearch: 'Search package, peer, or issue type', expected: 'Required', actual: 'Resolved', autoPeers: 'Automatic peer install', autoPeersSafe: 'Off (safe)', autoPeersUnsafe: 'Not disabled',
+  fix: 'Repair', confirmDependencyFix: 'Run this dependency repair? It may change the profile package.json, pnpm lockfile, or workspace settings.',
+  fix_install_peer: 'Install compatible peer', fix_activate_bundle: 'Activate bundle', fix_remove_bundle: 'Remove missing bundle', fix_disable_auto_peers: 'Disable automatic install', hostPeer: 'Requires a compatible DSH host or module fallback repair',
+  issue_missing_peer: 'Missing peer', issue_incompatible_peer: 'Incompatible peer version', issue_duplicate_peer: 'Multiple peer instances', issue_broken_link: 'Broken local link',
+  issue_package_unresolved: 'Dependency is not installed', issue_bundle_unresolved: 'Bundle cannot be resolved', issue_bundle_inactive: 'Bundle installed but inactive', issue_auto_peers_unsafe: 'Unsafe autoInstallPeers setting', issue_profile_unavailable: 'Profile is unavailable',
 }

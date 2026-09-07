@@ -75,3 +75,14 @@ test('web actions require confirmation and redact recovery failures', async () =
   assert.equal(failed.ok, false)
   assert.equal(JSON.stringify(failed).includes('secret=value'), false)
 })
+
+test('dependency repairs require confirmation and redact package manager failures', async () => {
+  const guardian = { snapshot: () => ({ entries: [] }), act: async () => ({}), fixAll: async () => ({}) }
+  const dependencies = { snapshot: () => ({ issues: [] }), fix: async () => { throw new Error('registry-token=secret') } }
+  const call = createWebHandler(guardian, dependencies)
+  const signal = new AbortController().signal
+  assert.equal((await call('dependency-fix', { id: 'demo', confirmed: false }, signal)).ok, false)
+  const failed = await call('dependency-fix', { id: 'demo', confirmed: true }, signal)
+  assert.equal(failed.ok, false)
+  assert.equal(JSON.stringify(failed).includes('registry-token=secret'), false)
+})
